@@ -6,6 +6,7 @@ plugins {
     kotlin("plugin.serialization") version "1.7.10"
     id("com.apollographql.apollo3").version("3.5.0")
 }
+apply(plugin = "dagger.hilt.android.plugin")
 
 android {
     compileSdk = 32
@@ -48,8 +49,9 @@ dependencies {
     //dagger hilt
     implementation ("com.google.dagger:hilt-android:2.42")
     kapt ("com.google.dagger:hilt-compiler:2.42")
-    implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
-    kapt ("androidx.hilt:hilt-compiler:1.0.0")
+    kapt("com.google.dagger:hilt-android-compiler:2.42")
+//    implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+//    kapt ("androidx.hilt:hilt-compiler:1.0.0")
 
 
     //apollo graphql
@@ -75,7 +77,7 @@ dependencies {
     kapt ("androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
 
     //glide
-    kapt ("com.github.bumptech.glide:glide:4.13.2")
+    implementation ("com.github.bumptech.glide:glide:4.13.2")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.13.2")
 
     //okhttp3

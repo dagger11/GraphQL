@@ -1,10 +1,12 @@
 package com.ppk.graphql.presentation.contract
 
-import com.ppk.graphql.data.model.LaunchModel
+import android.content.Context
 
 
 interface ViewContract {
-    fun nextActivity(launchModel: LaunchModel)
+    fun nextActivity(id:String)
+
+    fun provideContext():Context
 
     fun showToast(message:String)
 }

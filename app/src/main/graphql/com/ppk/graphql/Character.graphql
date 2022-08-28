@@ -1,13 +1,11 @@
-query Character {
-    characters {
-        results {
-            id
-            created
-            name
-            species
-            status
-            image
-            gender
-        }
+query Character($characterId: ID!) {
+    character(id: $characterId) {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
     }
 }

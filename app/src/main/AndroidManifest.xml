@@ -17,7 +17,7 @@
         android:theme="@style/Theme.GraphQL"
         tools:targetApi="31">
         <activity
-            android:name=".DetailActivity"
+            android:name=".presentation.view.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.view.MainActivity"
